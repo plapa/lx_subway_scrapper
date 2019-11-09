@@ -50,7 +50,6 @@ def download():
             for line in lines:
                 writer.writerow(line.to_csv())
             logger.info("Saving {} lines to file".format(len(lines)))
-        time.sleep(wait_in_seconds)
     else:
         logger.info("Request returned error {}".format(res.status_code))
 
@@ -59,5 +58,6 @@ if __name__ == "__main__":
     logger.info("Operation started")
     for _ in range(5):
         download()
+        time.sleep(wait_in_seconds)
 
     logger.info("Operation finished")
