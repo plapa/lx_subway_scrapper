@@ -56,8 +56,6 @@ def download():
 
 if __name__ == "__main__":
     logger.info("Operation started")
-    for _ in range(5):
-        download()
-        time.sleep(wait_in_seconds)
+    download()
 
     logger.info("Operation finished")
